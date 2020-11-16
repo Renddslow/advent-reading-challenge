@@ -1,7 +1,7 @@
 const got = require('got');
 const catchify = require('catchify');
 
-const listID = 510586;
+const listID = 'f24ee17c84';
 const baseURL = `https://us7.api.mailchimp.com/3.0/lists/${listID}/members`;
 const MAILCHIMP_KEY = process.env.MAILCHIMP_KEY;
 
