@@ -1,0 +1,77 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu',
+    'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+}
+
+.day-card {
+  display: block;
+  border-radius: 8px;
+  background: #e0b9e7;
+  max-width: 220px;
+  width: 100%;
+  box-sizing: border-box;
+  overflow: hidden;
+  z-index: 1;
+  position: relative;
+}
+
+.pss_v {
+  display: inline-block;
+}
+
+.day-card .grid {
+  padding: 24px 0;
+}
+
+.day-card header {
+  background: #9a2cae;
+  padding: 12px 24px 24px;
+}
+
+.grid {
+  display: grid;
+  grid-gap: 12px;
+}
+
+.pss-row {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, max-content));
+  grid-gap: 1ch;
+  padding: 0 24px;
+  justify-content: space-between;
+  align-items: end;
+}
+
+header h2 {
+  display: block;
+  margin: 0;
+  font-size: 56px;
+  position: relative;
+  font-weight: 900;
+  color: #fff;
+  z-index: 1;
+}
+
+header h2::before {
+  content: attr(data-month);
+  position: absolute;
+  opacity: 0.8;
+  z-index: -1;
+  font-size: 24px;
+  bottom: -18px;
+}
+
+.row {
+  padding: 0 24px;
+}
+
+.row:not(:last-child),
+.pss-row {
+  border-bottom: 2px solid #fff4;
+  padding-bottom: 10px;
+}
