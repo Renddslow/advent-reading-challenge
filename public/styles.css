@@ -107,13 +107,16 @@ header h4::before {
   padding-bottom: 10px;
 }
 
+.calendar {
+  max-width: 1200px;
+  width: 85%;
+  margin: 24px auto;
+}
+
 .days-grid {
   display: grid;
   grid-template-columns: repeat(5, minmax(0, 1fr));
   grid-gap: 12px;
-  max-width: 1200px;
-  width: 85%;
-  margin: 24px auto;
 }
 
 @media screen and (max-width: 1200px) {
@@ -148,7 +151,8 @@ header h4::before {
   font-weight: 500;
 }
 
-.jumbotron h2 {
+.jumbotron h2,
+.calendar h2 {
   color: #87109e;
   margin-bottom: 24px;
   font-size: 32px;
