@@ -24,6 +24,8 @@ exports.handler = async (event) => {
     }).then((d) => JSON.parse(d.body)),
   );
 
+  console.error(err);
+
   return {
     statusCode: 200,
     body: JSON.stringify({
