@@ -197,3 +197,65 @@ footer a {
   font-weight: 500;
   text-decoration: none;
 }
+
+form {
+  width: 100%;
+  max-width: 400px;
+}
+
+form .row {
+  display: grid;
+  grid-gap: 8px;
+  align-items: end;
+  grid-template-columns: minmax(0, 1fr) minmax(0, max-content);
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.form-control {
+  display: grid;
+  grid-gap: 8px;
+}
+
+.form-control label {
+  font-size: 14px;
+  font-weight: 500;
+  color: #2f0638;
+}
+
+.form-control:focus-within label {
+  color: #9a2cae;
+}
+
+.form-control input {
+  appearance: none;
+  -webkit-appearance: none;
+  background: #fff;
+  border: 1px solid #2f0638;
+  padding: 8px;
+  box-sizing: border-box;
+  border-radius: 8px;
+  outline: none;
+  font-size: 1em;
+}
+
+.form-control input:focus {
+  border-width: 2px;
+  border-color: #9a2cae;
+  padding: 7px;
+}
+
+form button {
+  background: #9a2cae;
+  color: #fff;
+  border-radius: 8px;
+  padding: 11px 24px;
+  box-sizing: border-box;
+  appearance: none;
+  -webkit-appearance: none;
+  border: 0;
+}
+
+h3 {
+  margin: 24px 0 12px;
+}
