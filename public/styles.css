@@ -269,3 +269,7 @@ form button:disabled {
 h3 {
   margin: 24px 0 12px;
 }
+
+form p {
+  text-align: left !important;
+}
