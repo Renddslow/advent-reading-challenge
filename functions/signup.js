@@ -16,6 +16,7 @@ exports.handler = async (event) => {
 
   const [err, response] = await catchify(
     got(baseURL, {
+      method: 'POST',
       headers: {
         'Content-Type': 'application/json',
         Authorization: `mubatt@wyopub.com:${MAILCHIMP_KEY}`,
