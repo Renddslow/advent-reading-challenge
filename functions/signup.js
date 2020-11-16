@@ -19,7 +19,9 @@ exports.handler = async (event) => {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
-        Authorization: `mubatt@wyopub.com:${MAILCHIMP_KEY}`,
+        Authorization: `Basic ${Buffer.from(`mubatt@wyopub.com:${MAILCHIMP_KEY}`).toString(
+          'base64',
+        )}`,
       },
       body: JSON.stringify(body),
     }).then((d) => JSON.parse(d.body)),
