@@ -12,12 +12,23 @@ body {
   display: block;
   border-radius: 8px;
   background: #e0b9e7;
-  max-width: 220px;
   width: 100%;
   box-sizing: border-box;
   overflow: hidden;
   z-index: 1;
   position: relative;
+}
+
+.day-card:nth-child(4n-1) {
+  background: #f8bfbf;
+}
+
+.day-card:nth-child(4n-2) {
+  background: #b3e5fc;
+}
+
+.day-card:nth-child(4n-3) {
+  background: #cfe4ba;
 }
 
 .pss_v {
@@ -33,6 +44,18 @@ body {
   padding: 12px 24px 24px;
 }
 
+.day-card:nth-child(4n-1) header {
+  background: #e93b3f;
+}
+
+.day-card:nth-child(4n-2) header {
+  background: #27a6f4;
+}
+
+.day-card:nth-child(4n-3) header {
+  background: #6ca834;
+}
+
 .grid {
   display: grid;
   grid-gap: 12px;
@@ -40,14 +63,22 @@ body {
 
 .pss-row {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, max-content));
-  grid-gap: 1ch;
+  grid-template-columns: minmax(0, 1fr);
+  grid-gap: 0.75ch;
   padding: 0 24px;
-  justify-content: space-between;
-  align-items: end;
 }
 
-header h2 {
+.pss-row span:first-child {
+  font-weight: 500;
+  font-style: italic;
+}
+
+.pss-row,
+.row {
+  color: #2f0638;
+}
+
+header h4 {
   display: block;
   margin: 0;
   font-size: 56px;
@@ -57,7 +88,7 @@ header h2 {
   z-index: 1;
 }
 
-header h2::before {
+header h4::before {
   content: attr(data-month);
   position: absolute;
   opacity: 0.8;
@@ -74,4 +105,91 @@ header h2::before {
 .pss-row {
   border-bottom: 2px solid #fff4;
   padding-bottom: 10px;
+}
+
+.days-grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  grid-gap: 12px;
+  max-width: 1200px;
+  width: 85%;
+  margin: 24px auto;
+}
+
+@media screen and (max-width: 1200px) {
+  .days-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media screen and (max-width: 760px) {
+  .days-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+.jumbotron {
+  margin: 0 auto 56px;
+  width: 85%;
+  max-width: 1200px;
+}
+
+.jumbotron p {
+  line-height: 1.645;
+  font-size: 1.25em;
+  font-weight: 300;
+  color: #2f0638;
+  margin-bottom: 12px;
+  max-width: 750px;
+  text-align: justify;
+}
+
+.jumbotron p strong {
+  font-weight: 500;
+}
+
+.jumbotron h2 {
+  color: #87109e;
+  margin-bottom: 24px;
+  font-size: 32px;
+}
+
+body > header {
+  padding: 24px 0;
+  width: 85%;
+  max-width: 1200px;
+  box-sizing: border-box;
+  margin: 0 auto;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 18px;
+  color: #87109e;
+}
+
+footer {
+  font-size: 12px;
+  text-align: center;
+  padding: 24px;
+  box-sizing: border-box;
+  line-height: 1.5;
+  color: #2f0638;
+  position: relative;
+}
+
+footer::before {
+  width: 70px;
+  content: '';
+  height: 2px;
+  background: #2f0638;
+  opacity: 0.4;
+  display: block;
+  margin: 0 auto 12px;
+}
+
+footer a {
+  color: #87109e;
+  font-weight: 500;
+  text-decoration: none;
 }

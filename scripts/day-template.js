@@ -8,7 +8,7 @@ const Day = ({ day, pss, torah, prophets, nt }) => {
   return `
 <div class="day-card">
   <header>
-    <h2 aria-label="${month.long} ${d}" data-month="${month.short}">${d}</h2>
+    <h4 aria-label="${month.long} ${d}" data-month="${month.short}">${d}</h4>
   </header>
   <div class="grid">
     <div class="pss-row">
