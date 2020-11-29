@@ -5,7 +5,7 @@ const papa = require('papaparse');
 const pupa = require('pupa');
 const prettier = require('prettier');
 
-const read = async (p) => (await readFile(p)).toString();
+const read = async (p) => (await readFile(p)).toString().trim();
 const write = require('util').promisify(fs.writeFile);
 
 const Day = require('./day-template');
